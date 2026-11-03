@@ -1,19 +1,26 @@
 # act-tasks
 
 An independently installable Ruby package with the `ActTasks` namespace.
-This foundation supplies identity and version only; task behavior and ACT
-integration belong to later milestones in the authoritative
+It supplies `ActTasks::TaskStore` YAML loading and explicit schema validation;
+policy and ACT orchestration remain in main under the authoritative
 [breakup plan](https://github.com/dtnorris/agent-coding-tool-data/blob/4d297dcc6bd8574c2c103125abf453d8673aafec/plans/ab/AB-PLN-01A/plan.md).
 
 ```ruby
 require "act_tasks"
 ActTasks::VERSION # => "0.1.0"
+ActTasks::TaskStore.new("/path/to/tasks").load("TASK-ID")
 ```
 
 The gem has no runtime gem dependencies, imports no other ACT repository, and
 does not read `.env`. Main ACT retains command and mode-selection authority.
-Publication, exact dependency refs, installed-ACT adoption and successor
-preparation require operator review. No split-mode composition is declared here.
+`load`, filename-sorted `all` and `task_path` preserve the original main API.
+`ActTasks::InvalidTask` identifies missing tasks and invalid metadata, with
+unchanged messages. YAML alias refusal, parser errors, filesystem exceptions
+and malformed top-level shape behavior remain native. Unrelated author metadata
+is preserved. Main translates the package error to its own `InvalidTask` and
+retains `CheckpointPolicy.required?`; the package validates only schema shape.
+Publication, dependency pin updates and installed-ACT adoption remain operator
+steps. Main owns the immutable split composition and compatibility qualification.
 
 Install development dependencies with `bundle install` (separate from test
 timing). Both `rake` and `bundle exec rake` run the **same entire default suite**,
@@ -26,8 +33,10 @@ hits never carry across runs. Each test file must define at least one case.
 
 `test/coverage_floors.json` records the measured bootstrap executable nodes and
 100% line/branch floors; files without branches report an empty branch inventory.
-This measures the import/version contract, not domain behavior. Migrated sources
-require their original measured floors and covered-node mapping before adoption.
+The TaskStore seed records its original source hash, numeric measured floors and
+covered-node transfer in `test/task_store_migration.json`. Its new floor is 100%
+for executable lines and branch arms. These schema tests run without main ACT;
+main retains policy/prepare journeys and tests public split delegation separately.
 
 The initial timing contract targets David's Darwin arm64 Mac with Ruby 4.0.6
 and this lockfile. The private watchdog supervises test startup through cleanup,

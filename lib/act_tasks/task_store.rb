@@ -1,0 +1,105 @@
+# frozen_string_literal: true
+
+require "yaml"
+require_relative "errors"
+
+module ActTasks
+  # Loads registered YAML and validates explicit task metadata without inferring roles.
+  class TaskStore
+    VALID_ACCESS = %w[write read_only].freeze
+
+    # Binds the task directory without I/O. Filesystem errors occur on reads.
+    def initialize(root)
+      @root = root
+    end
+
+    # Returns one validated YAML task by ID. InvalidTask marks absent tasks or
+    # invalid metadata; native filesystem, YAML and shape exceptions propagate.
+    def load(id)
+      path = task_path(id)
+      raise InvalidTask, "task not found: #{id}" unless File.file?(path)
+
+      task = YAML.safe_load_file(path, aliases: false) || {}
+      validate!(task, path)
+      task
+    end
+
+    # Returns validated tasks in filename order; raises the same errors as load.
+    def all
+      Dir.glob(File.join(@root, "*.yml")).sort.map do |path|
+        task = YAML.safe_load_file(path, aliases: false) || {}
+        validate!(task, path)
+        task
+      end
+    end
+
+    # Returns the YAML path for an ID without checking existence or reading it.
+    def task_path(id)
+      File.join(@root, "#{id}.yml")
+    end
+
+    private
+
+    # Validates a loaded task mapping, preserving unrelated metadata. Callers
+    # ignore its return; InvalidTask identifies invalid fields or guidance/policy.
+    def validate!(task, path)
+      id = task["id"]
+      title = task["title"]
+      repositories = task["repositories"]
+
+      raise InvalidTask, "#{path}: id is required" unless id.is_a?(String) && !id.empty?
+      raise InvalidTask, "#{path}: title is required" unless title.is_a?(String) && !title.empty?
+      unless repositories.is_a?(Hash) && !repositories.empty?
+        raise InvalidTask, "#{path}: repositories must be a non-empty mapping"
+      end
+
+      repositories.each do |name, spec|
+        raise InvalidTask, "#{path}: repository name must be a string" unless name.is_a?(String) && !name.empty?
+        unless spec.is_a?(Hash) && VALID_ACCESS.include?(spec["access"])
+          raise InvalidTask, "#{path}: #{name} access must be write or read_only"
+        end
+      end
+
+      depends_on = task.fetch("depends_on", [])
+      raise InvalidTask, "#{path}: depends_on must be an array" unless depends_on.is_a?(Array)
+
+      if task.key?("planning_guidance") && task["planning_guidance"] != "required"
+        raise InvalidTask, "#{path}: planning_guidance must be the scalar string required when present"
+      end
+
+      if task.key?("checkpoint")
+        policy = task["checkpoint"]
+        unless policy.is_a?(Hash) && %w[required exempt].include?(policy["mode"]) &&
+               (policy.keys - %w[mode category reason]).empty?
+          raise InvalidTask, "#{path}: checkpoint mode must be required or exempt"
+        end
+        if policy["mode"] == "exempt"
+          unless %w[planning inspection no_code].include?(policy["category"]) &&
+                 policy["reason"].is_a?(String) && !policy["reason"].strip.empty?
+            raise InvalidTask, "#{path}: checkpoint exemption requires category and reason"
+          end
+        elsif policy.keys != ["mode"]
+          raise InvalidTask, "#{path}: required checkpoint takes only mode"
+        end
+      end
+
+      if task.key?("worker_recommendation")
+        recommendation = task["worker_recommendation"]
+        unless recommendation.is_a?(Hash)
+          raise InvalidTask, "#{path}: worker_recommendation must be a mapping"
+        end
+        %w[model thinking].each do |field|
+          value = recommendation[field]
+          unless value.is_a?(String) && !value.empty?
+            raise InvalidTask, "#{path}: worker_recommendation #{field} must be a non-empty string"
+          end
+        end
+      end
+
+      %w[constraints acceptance].each do |field|
+        value = task.fetch(field, [])
+        raise InvalidTask, "#{path}: #{field} must be an array" unless value.is_a?(Array)
+      end
+    end
+  end
+end

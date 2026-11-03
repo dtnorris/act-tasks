@@ -1,0 +1,449 @@
+{
+  "original_repository": "agent-coding-tool",
+  "original_revision": "4df91976b075331d16eb044fced8bdd5d2e01325",
+  "original_path": "lib/agent_coding_tool/task_store.rb",
+  "original_sha256": "36b2cb414a6eef816c4ad2255f2e3328678be04c6a5f58cf857a4d84e6d3e8e3",
+  "measurement": "Ruby 4.0.6 arm64-darwin23; original TaskStoreTest plus strict planning designation under NoGitExecution; 4 tests, 73 assertions, zero failures/errors/skips. Focused seed, not complete ACT acceptance.",
+  "original_line_percent": 96.49122807017544,
+  "original_branch_percent": 73.52941176470588,
+  "original_covered_lines": 55,
+  "original_total_lines": 57,
+  "original_covered_arms": 25,
+  "original_total_arms": 34,
+  "package_path": "lib/act_tasks/task_store.rb",
+  "package_sha256": "19fa0f8b59147266e7f424d34156a4a7cae49447b54222e58609d5fcd65cb391",
+  "package_line_percent_floor": 100,
+  "package_branch_percent_floor": 100,
+  "covered_line_mapping": [
+    {
+      "original": 3,
+      "package": 3
+    },
+    {
+      "original": 5,
+      "package": 6
+    },
+    {
+      "original": 7,
+      "package": 8
+    },
+    {
+      "original": 8,
+      "package": 9
+    },
+    {
+      "original": 10,
+      "package": 12
+    },
+    {
+      "original": 11,
+      "package": 13
+    },
+    {
+      "original": 14,
+      "package": 18
+    },
+    {
+      "original": 15,
+      "package": 19
+    },
+    {
+      "original": 16,
+      "package": 20
+    },
+    {
+      "original": 18,
+      "package": 22
+    },
+    {
+      "original": 19,
+      "package": 23
+    },
+    {
+      "original": 20,
+      "package": 24
+    },
+    {
+      "original": 23,
+      "package": 28
+    },
+    {
+      "original": 24,
+      "package": 29
+    },
+    {
+      "original": 25,
+      "package": 30
+    },
+    {
+      "original": 26,
+      "package": 31
+    },
+    {
+      "original": 27,
+      "package": 32
+    },
+    {
+      "original": 31,
+      "package": 37
+    },
+    {
+      "original": 32,
+      "package": 38
+    },
+    {
+      "original": 35,
+      "package": 41
+    },
+    {
+      "original": 39,
+      "package": 45
+    },
+    {
+      "original": 40,
+      "package": 46
+    },
+    {
+      "original": 41,
+      "package": 47
+    },
+    {
+      "original": 42,
+      "package": 48
+    },
+    {
+      "original": 44,
+      "package": 50
+    },
+    {
+      "original": 45,
+      "package": 51
+    },
+    {
+      "original": 46,
+      "package": 52
+    },
+    {
+      "original": 50,
+      "package": 56
+    },
+    {
+      "original": 51,
+      "package": 57
+    },
+    {
+      "original": 52,
+      "package": 58
+    },
+    {
+      "original": 57,
+      "package": 63
+    },
+    {
+      "original": 58,
+      "package": 64
+    },
+    {
+      "original": 60,
+      "package": 66
+    },
+    {
+      "original": 61,
+      "package": 67
+    },
+    {
+      "original": 64,
+      "package": 70
+    },
+    {
+      "original": 65,
+      "package": 71
+    },
+    {
+      "original": 66,
+      "package": 72
+    },
+    {
+      "original": 67,
+      "package": 73
+    },
+    {
+      "original": 68,
+      "package": 74
+    },
+    {
+      "original": 70,
+      "package": 76
+    },
+    {
+      "original": 71,
+      "package": 77
+    },
+    {
+      "original": 73,
+      "package": 79
+    },
+    {
+      "original": 75,
+      "package": 81
+    },
+    {
+      "original": 76,
+      "package": 82
+    },
+    {
+      "original": 80,
+      "package": 86
+    },
+    {
+      "original": 81,
+      "package": 87
+    },
+    {
+      "original": 82,
+      "package": 88
+    },
+    {
+      "original": 83,
+      "package": 89
+    },
+    {
+      "original": 85,
+      "package": 91
+    },
+    {
+      "original": 86,
+      "package": 92
+    },
+    {
+      "original": 87,
+      "package": 93
+    },
+    {
+      "original": 88,
+      "package": 94
+    },
+    {
+      "original": 93,
+      "package": 99
+    },
+    {
+      "original": 94,
+      "package": 100
+    },
+    {
+      "original": 95,
+      "package": 101
+    }
+  ],
+  "covered_branch_mapping": [
+    {
+      "original": "[:unless, 0, 16, 6, 16, 72]",
+      "package": "[:unless, 0, 20, 6, 20, 72]",
+      "covered_arms": [
+        {
+          "original": "[:else, 1, 16, 6, 16, 72]",
+          "package": "[:else, 1, 20, 6, 20, 72]"
+        }
+      ]
+    },
+    {
+      "original": "[:unless, 3, 44, 6, 44, 88]",
+      "package": "[:unless, 3, 50, 6, 50, 88]",
+      "covered_arms": [
+        {
+          "original": "[:else, 4, 44, 6, 44, 88]",
+          "package": "[:else, 4, 50, 6, 50, 88]"
+        }
+      ]
+    },
+    {
+      "original": "[:unless, 6, 45, 6, 45, 97]",
+      "package": "[:unless, 6, 51, 6, 51, 97]",
+      "covered_arms": [
+        {
+          "original": "[:else, 7, 45, 6, 45, 97]",
+          "package": "[:else, 7, 51, 6, 51, 97]"
+        }
+      ]
+    },
+    {
+      "original": "[:unless, 9, 46, 6, 48, 9]",
+      "package": "[:unless, 9, 52, 6, 54, 9]",
+      "covered_arms": [
+        {
+          "original": "[:else, 10, 46, 6, 48, 9]",
+          "package": "[:else, 10, 52, 6, 54, 9]"
+        }
+      ]
+    },
+    {
+      "original": "[:unless, 12, 51, 8, 51, 112]",
+      "package": "[:unless, 12, 57, 8, 57, 112]",
+      "covered_arms": [
+        {
+          "original": "[:else, 13, 51, 8, 51, 112]",
+          "package": "[:else, 13, 57, 8, 57, 112]"
+        }
+      ]
+    },
+    {
+      "original": "[:unless, 15, 52, 8, 54, 11]",
+      "package": "[:unless, 15, 58, 8, 60, 11]",
+      "covered_arms": [
+        {
+          "original": "[:else, 16, 52, 8, 54, 11]",
+          "package": "[:else, 16, 58, 8, 60, 11]"
+        }
+      ]
+    },
+    {
+      "original": "[:unless, 18, 58, 6, 58, 94]",
+      "package": "[:unless, 18, 64, 6, 64, 94]",
+      "covered_arms": [
+        {
+          "original": "[:else, 19, 58, 6, 58, 94]",
+          "package": "[:else, 19, 64, 6, 64, 94]"
+        }
+      ]
+    },
+    {
+      "original": "[:if, 21, 60, 6, 62, 9]",
+      "package": "[:if, 21, 66, 6, 68, 9]",
+      "covered_arms": [
+        {
+          "original": "[:then, 22, 61, 8, 61, 103]",
+          "package": "[:then, 22, 67, 8, 67, 103]"
+        },
+        {
+          "original": "[:else, 23, 60, 6, 62, 9]",
+          "package": "[:else, 23, 66, 6, 68, 9]"
+        }
+      ]
+    },
+    {
+      "original": "[:if, 24, 64, 6, 78, 9]",
+      "package": "[:if, 24, 70, 6, 84, 9]",
+      "covered_arms": [
+        {
+          "original": "[:then, 25, 65, 8, 77, 11]",
+          "package": "[:then, 25, 71, 8, 83, 11]"
+        },
+        {
+          "original": "[:else, 26, 64, 6, 78, 9]",
+          "package": "[:else, 26, 70, 6, 84, 9]"
+        }
+      ]
+    },
+    {
+      "original": "[:unless, 27, 66, 8, 69, 11]",
+      "package": "[:unless, 27, 72, 8, 75, 11]",
+      "covered_arms": [
+        {
+          "original": "[:else, 28, 66, 8, 69, 11]",
+          "package": "[:else, 28, 72, 8, 75, 11]"
+        },
+        {
+          "original": "[:then, 29, 68, 10, 68, 82]",
+          "package": "[:then, 29, 74, 10, 74, 82]"
+        }
+      ]
+    },
+    {
+      "original": "[:if, 30, 70, 8, 77, 11]",
+      "package": "[:if, 30, 76, 8, 83, 11]",
+      "covered_arms": [
+        {
+          "original": "[:then, 31, 71, 10, 74, 13]",
+          "package": "[:then, 31, 77, 10, 80, 13]"
+        },
+        {
+          "original": "[:else, 32, 75, 8, 77, 11]",
+          "package": "[:else, 32, 81, 8, 83, 11]"
+        }
+      ]
+    },
+    {
+      "original": "[:unless, 33, 71, 10, 74, 13]",
+      "package": "[:unless, 33, 77, 10, 80, 13]",
+      "covered_arms": [
+        {
+          "original": "[:else, 34, 71, 10, 74, 13]",
+          "package": "[:else, 34, 77, 10, 80, 13]"
+        },
+        {
+          "original": "[:then, 35, 73, 12, 73, 91]",
+          "package": "[:then, 35, 79, 12, 79, 91]"
+        }
+      ]
+    },
+    {
+      "original": "[:if, 36, 75, 8, 77, 11]",
+      "package": "[:if, 36, 81, 8, 83, 11]",
+      "covered_arms": [
+        {
+          "original": "[:then, 37, 76, 10, 76, 75]",
+          "package": "[:then, 37, 82, 10, 82, 75]"
+        }
+      ]
+    },
+    {
+      "original": "[:if, 39, 80, 6, 91, 9]",
+      "package": "[:if, 39, 86, 6, 97, 9]",
+      "covered_arms": [
+        {
+          "original": "[:then, 40, 81, 8, 90, 11]",
+          "package": "[:then, 40, 87, 8, 96, 11]"
+        },
+        {
+          "original": "[:else, 41, 80, 6, 91, 9]",
+          "package": "[:else, 41, 86, 6, 97, 9]"
+        }
+      ]
+    },
+    {
+      "original": "[:unless, 42, 82, 8, 84, 11]",
+      "package": "[:unless, 42, 88, 8, 90, 11]",
+      "covered_arms": [
+        {
+          "original": "[:else, 43, 82, 8, 84, 11]",
+          "package": "[:else, 43, 88, 8, 90, 11]"
+        },
+        {
+          "original": "[:then, 44, 83, 10, 83, 79]",
+          "package": "[:then, 44, 89, 10, 89, 79]"
+        }
+      ]
+    },
+    {
+      "original": "[:unless, 45, 87, 10, 89, 13]",
+      "package": "[:unless, 45, 93, 10, 95, 13]",
+      "covered_arms": [
+        {
+          "original": "[:else, 46, 87, 10, 89, 13]",
+          "package": "[:else, 46, 93, 10, 95, 13]"
+        },
+        {
+          "original": "[:then, 47, 88, 12, 88, 99]",
+          "package": "[:then, 47, 94, 12, 94, 99]"
+        }
+      ]
+    },
+    {
+      "original": "[:unless, 48, 95, 8, 95, 89]",
+      "package": "[:unless, 48, 101, 8, 101, 89]",
+      "covered_arms": [
+        {
+          "original": "[:else, 49, 95, 8, 95, 89]",
+          "package": "[:else, 49, 101, 8, 101, 89]"
+        }
+      ]
+    }
+  ],
+  "scenarios": {
+    "TaskStoreTest#test_checkpoint_defaults_to_required_and_exemptions_are_explicit": "TaskStoreTest#test_checkpoint_metadata; CheckpointPolicy consumer remains in main",
+    "TaskStoreTest#test_worker_recommendation_accepts_generic_nonempty_strings": "TaskStoreTest#test_planning_and_worker_metadata",
+    "TaskStoreTest#test_worker_recommendation_validation": "TaskStoreTest#test_planning_and_worker_metadata",
+    "PlanningGuidanceTest#test_strict_designation_validation_before_public_prepare_writes": "TaskStoreTest#test_planning_and_worker_metadata; public prepare/no-write consumer remains in main"
+  }
+}
