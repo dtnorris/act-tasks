@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 require_relative "act_tasks/version"
+require_relative "act_tasks/task_store"
 
-# Independent task package identity; domain behavior is introduced separately.
+# Task YAML loading and schema validation, independent of main ACT policy.
 module ActTasks
 end
