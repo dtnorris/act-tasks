@@ -1,0 +1,872 @@
+{
+  "original_repository": "dtnorris/agent-coding-tool",
+  "original_revision": "3a498ea1d0a47bc3b3623b00043ba177afeaceac",
+  "measurement": {
+    "kind": "focused source reference; not complete ACT acceptance",
+    "ruby": "ruby 4.0.9 (2026-10-23 revision 3e93b23afc) +PRISM [arm64-darwin27]",
+    "selected_tests": 14,
+    "assertions": 106,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "selection": "ReadyUnlockMetricsTest#.*|CLITest#test_status_(ranks_ready_tasks_by_downstream_depth_then_distinct_count_then_natural_id|displays_completion_metrics_for_fresh_candidates_without_reordering_them|ranks_ready_tasks_by_parallel_width_then_unlock_count_before_downstream_metrics)|IceboxTest#test_dependency_changes_and_unlock_metrics_remain_truthful|ExternalActivityTest#test_(read_only_inspection_and_no_observation_json_compatibility|bounded_unknown_alias_and_read_only_scheduling)",
+    "no_git_guard": "test/support/no_git_execution.rb loaded before production by test_helper",
+    "process_audit_entries": 0,
+    "limits": "Ruby-level guard, not independent OS tracing. Focused source reference, not full ACT acceptance."
+  },
+  "package_path": "lib/act_tasks/completion_metrics.rb",
+  "package_sha256": "90cefbc8a6821e9724eb7e5337deeaa96b8c8a1141b8da5f5b937a6740b6fc6e",
+  "package_line_percent_floor": 100,
+  "package_branch_percent_floor": 100,
+  "source_references": {
+    "lib/agent_coding_tool/cli.rb": {
+      "sha256": "19ca68a6af44167f3a22cd2fcfb07b9278f1986e8fdfa406f950c7f1fae2bb1c",
+      "method_ranges": [
+        [
+          1206,
+          1232
+        ],
+        [
+          1244,
+          1250
+        ],
+        [
+          1252,
+          1263
+        ]
+      ],
+      "scope": "Only mapped calculation nodes; not whole-file coverage. Observation, status projection, authority resolution and live admission stay in ACT.",
+      "measured_moved_line_percent": 100.0,
+      "measured_moved_branch_percent": 100.0,
+      "line_transfer": [
+        {
+          "source": 1206,
+          "package": 11,
+          "source_hits": 1,
+          "package_hits": 1
+        },
+        {
+          "source": 1208,
+          "package": 12,
+          "source_hits": 26,
+          "package_hits": 65
+        },
+        {
+          "source": 1209,
+          "package": 13,
+          "source_hits": 9,
+          "package_hits": 28
+        },
+        {
+          "source": 1210,
+          "package": 14,
+          "source_hits": 66,
+          "package_hits": 187
+        },
+        {
+          "source": 1218,
+          "package": 16,
+          "source_hits": 9,
+          "package_hits": 27
+        },
+        {
+          "source": 1219,
+          "package": 17,
+          "source_hits": 31,
+          "package_hits": 35
+        },
+        {
+          "source": 1221,
+          "package": 19,
+          "source_hits": 28,
+          "package_hits": 29
+        },
+        {
+          "source": 1222,
+          "package": 20,
+          "source_hits": 28,
+          "package_hits": 28
+        },
+        {
+          "source": 1224,
+          "package": 21,
+          "source_hits": 28,
+          "package_hits": 28
+        },
+        {
+          "source": 1244,
+          "package": 71,
+          "source_hits": 1,
+          "package_hits": 1
+        },
+        {
+          "source": 1245,
+          "package": 72,
+          "source_hits": 47,
+          "package_hits": 106
+        },
+        {
+          "source": 1246,
+          "package": 73,
+          "source_hits": 20,
+          "package_hits": 80
+        },
+        {
+          "source": 1248,
+          "package": 75,
+          "source_hits": 19,
+          "package_hits": 78
+        },
+        {
+          "source": 1252,
+          "package": 81,
+          "source_hits": 1,
+          "package_hits": 1
+        },
+        {
+          "source": 1253,
+          "package": 82,
+          "source_hits": 28,
+          "package_hits": 28
+        },
+        {
+          "source": 1254,
+          "package": 83,
+          "source_hits": 28,
+          "package_hits": 28
+        },
+        {
+          "source": 1255,
+          "package": 84,
+          "source_hits": 28,
+          "package_hits": 28
+        },
+        {
+          "source": 1256,
+          "package": 85,
+          "source_hits": 20,
+          "package_hits": 78
+        },
+        {
+          "source": 1257,
+          "package": 86,
+          "source_hits": 20,
+          "package_hits": 78
+        },
+        {
+          "source": 1259,
+          "package": 88,
+          "source_hits": 18,
+          "package_hits": 72
+        },
+        {
+          "source": 1260,
+          "package": 89,
+          "source_hits": 18,
+          "package_hits": 72
+        },
+        {
+          "source": 1262,
+          "package": 91,
+          "source_hits": 28,
+          "package_hits": 28
+        }
+      ],
+      "branch_transfer": [
+        {
+          "source": "[:unless, 630, 1219, 8, 1219, 70]",
+          "package": "[:unless, 0, 17, 8, 17, 70]",
+          "arms": [
+            {
+              "source": "[:else, 631, 1219, 8, 1219, 70]",
+              "package": "[:else, 1, 17, 8, 17, 70]",
+              "source_hits": 28,
+              "package_hits": 29
+            },
+            {
+              "source": "[:then, 632, 1219, 8, 1219, 12]",
+              "package": "[:then, 2, 17, 8, 17, 12]",
+              "source_hits": 3,
+              "package_hits": 5
+            }
+          ]
+        },
+        {
+          "source": "[:if, 636, 1246, 8, 1246, 27]",
+          "package": "[:if, 15, 73, 8, 73, 27]",
+          "arms": [
+            {
+              "source": "[:then, 637, 1246, 8, 1246, 12]",
+              "package": "[:then, 16, 73, 8, 73, 12]",
+              "source_hits": 1,
+              "package_hits": 2
+            },
+            {
+              "source": "[:else, 638, 1246, 8, 1246, 27]",
+              "package": "[:else, 17, 73, 8, 73, 27]",
+              "source_hits": 19,
+              "package_hits": 78
+            }
+          ]
+        },
+        {
+          "source": "[:until, 639, 1255, 6, 1261, 9]",
+          "package": "[:until, 18, 84, 6, 90, 9]",
+          "arms": [
+            {
+              "source": "[:body, 640, 1256, 8, 1260, 56]",
+              "package": "[:body, 19, 85, 8, 89, 56]",
+              "source_hits": 20,
+              "package_hits": 78
+            }
+          ]
+        },
+        {
+          "source": "[:if, 641, 1257, 8, 1257, 32]",
+          "package": "[:if, 20, 86, 8, 86, 32]",
+          "arms": [
+            {
+              "source": "[:then, 642, 1257, 8, 1257, 12]",
+              "package": "[:then, 21, 86, 8, 86, 12]",
+              "source_hits": 2,
+              "package_hits": 6
+            },
+            {
+              "source": "[:else, 643, 1257, 8, 1257, 32]",
+              "package": "[:else, 22, 86, 8, 86, 32]",
+              "source_hits": 18,
+              "package_hits": 72
+            }
+          ]
+        }
+      ],
+      "retained_main_executable_lines": [
+        1207,
+        1212,
+        1213,
+        1215
+      ]
+    },
+    "lib/agent_coding_tool/coordinator.rb": {
+      "sha256": "34369207dd98b1a86882a98a5723ca10ab37dc63cd328418e6b158074cee7a49",
+      "method_ranges": [
+        [
+          177,
+          212
+        ],
+        [
+          987,
+          991
+        ],
+        [
+          1007,
+          1015
+        ],
+        [
+          1025,
+          1041
+        ]
+      ],
+      "scope": "Only mapped calculation nodes; not whole-file coverage. Observation, status projection, authority resolution and live admission stay in ACT.",
+      "measured_moved_line_percent": 100.0,
+      "measured_moved_branch_percent": 91.66666666666667,
+      "line_transfer": [
+        {
+          "source": 177,
+          "package": 51,
+          "source_hits": 1,
+          "package_hits": 1
+        },
+        {
+          "source": 194,
+          "package": 53,
+          "source_hits": 53,
+          "package_hits": 54
+        },
+        {
+          "source": 198,
+          "package": 56,
+          "source_hits": 34,
+          "package_hits": 35
+        },
+        {
+          "source": 199,
+          "package": 57,
+          "source_hits": 34,
+          "package_hits": 31
+        },
+        {
+          "source": 200,
+          "package": 61,
+          "source_hits": 25,
+          "package_hits": 50
+        },
+        {
+          "source": 201,
+          "package": 63,
+          "source_hits": 25,
+          "package_hits": 46
+        },
+        {
+          "source": 202,
+          "package": 64,
+          "source_hits": 25,
+          "package_hits": 39
+        },
+        {
+          "source": 987,
+          "package": 32,
+          "source_hits": 1,
+          "package_hits": 1
+        },
+        {
+          "source": 988,
+          "package": 37,
+          "source_hits": 229,
+          "package_hits": 111
+        },
+        {
+          "source": 989,
+          "package": 38,
+          "source_hits": 124,
+          "package_hits": 79
+        },
+        {
+          "source": 1007,
+          "package": 32,
+          "source_hits": 1,
+          "package_hits": 1
+        },
+        {
+          "source": 1008,
+          "package": 33,
+          "source_hits": 34,
+          "package_hits": 42
+        },
+        {
+          "source": 1009,
+          "package": 34,
+          "source_hits": 191,
+          "package_hits": 155
+        },
+        {
+          "source": 1010,
+          "package": 35,
+          "source_hits": 191,
+          "package_hits": 153
+        },
+        {
+          "source": 1012,
+          "package": 37,
+          "source_hits": 146,
+          "package_hits": 111
+        },
+        {
+          "source": 1013,
+          "package": 40,
+          "source_hits": 223,
+          "package_hits": 185
+        },
+        {
+          "source": 1025,
+          "package": 97,
+          "source_hits": 1,
+          "package_hits": 1
+        },
+        {
+          "source": 1026,
+          "package": 98,
+          "source_hits": 34,
+          "package_hits": 20
+        },
+        {
+          "source": 1027,
+          "package": 99,
+          "source_hits": 34,
+          "package_hits": 20
+        },
+        {
+          "source": 1028,
+          "package": 100,
+          "source_hits": 79,
+          "package_hits": 97
+        },
+        {
+          "source": 1030,
+          "package": 102,
+          "source_hits": 38,
+          "package_hits": 63
+        },
+        {
+          "source": 1031,
+          "package": 103,
+          "source_hits": 13,
+          "package_hits": 20
+        },
+        {
+          "source": 1032,
+          "package": 104,
+          "source_hits": 13,
+          "package_hits": 20
+        },
+        {
+          "source": 1035,
+          "package": 107,
+          "source_hits": 25,
+          "package_hits": 43
+        },
+        {
+          "source": 1036,
+          "package": 108,
+          "source_hits": 25,
+          "package_hits": 43
+        },
+        {
+          "source": 1037,
+          "package": 109,
+          "source_hits": 25,
+          "package_hits": 43
+        },
+        {
+          "source": 1039,
+          "package": 111,
+          "source_hits": 34,
+          "package_hits": 20
+        },
+        {
+          "source": 1040,
+          "package": 112,
+          "source_hits": 34,
+          "package_hits": 20
+        }
+      ],
+      "branch_transfer": [
+        {
+          "source": "[:unless, 78, 200, 10, 200, 128]",
+          "package": "[:if, 9, 61, 8, 61, 23]",
+          "arms": [
+            {
+              "source": "[:else, 79, 200, 10, 200, 128]",
+              "package": "[:then, 10, 61, 8, 61, 12]",
+              "source_hits": 25,
+              "package_hits": 4
+            },
+            {
+              "source": "[:then, 80, 200, 10, 200, 14]",
+              "package": "[:else, 11, 61, 8, 61, 23]",
+              "source_hits": 0,
+              "package_hits": 46
+            }
+          ]
+        },
+        {
+          "source": "[:unless, 81, 202, 10, 202, 70]",
+          "package": "[:unless, 12, 64, 8, 64, 56]",
+          "arms": [
+            {
+              "source": "[:else, 82, 202, 10, 202, 70]",
+              "package": "[:else, 13, 64, 8, 64, 56]",
+              "source_hits": 4,
+              "package_hits": 2
+            },
+            {
+              "source": "[:then, 83, 202, 10, 202, 21]",
+              "package": "[:then, 14, 64, 8, 64, 19]",
+              "source_hits": 21,
+              "package_hits": 37
+            }
+          ]
+        },
+        {
+          "source": "[:if, 554, 1010, 8, 1010, 97]",
+          "package": "[:if, 3, 35, 8, 35, 97]",
+          "arms": [
+            {
+              "source": "[:then, 555, 1010, 8, 1010, 18]",
+              "package": "[:then, 4, 35, 8, 35, 18]",
+              "source_hits": 45,
+              "package_hits": 40
+            },
+            {
+              "source": "[:else, 556, 1010, 8, 1010, 97]",
+              "package": "[:else, 5, 35, 8, 35, 97]",
+              "source_hits": 146,
+              "package_hits": 111
+            }
+          ]
+        },
+        {
+          "source": "[:if, 560, 1028, 8, 1028, 63]",
+          "package": "[:if, 23, 100, 8, 100, 63]",
+          "arms": [
+            {
+              "source": "[:then, 561, 1028, 8, 1028, 14]",
+              "package": "[:then, 24, 100, 8, 100, 14]",
+              "source_hits": 41,
+              "package_hits": 34
+            },
+            {
+              "source": "[:else, 562, 1028, 8, 1028, 63]",
+              "package": "[:else, 25, 100, 8, 100, 63]",
+              "source_hits": 38,
+              "package_hits": 63
+            }
+          ]
+        },
+        {
+          "source": "[:if, 563, 1030, 8, 1033, 11]",
+          "package": "[:if, 26, 102, 8, 105, 11]",
+          "arms": [
+            {
+              "source": "[:then, 564, 1031, 10, 1032, 16]",
+              "package": "[:then, 27, 103, 10, 104, 16]",
+              "source_hits": 13,
+              "package_hits": 20
+            },
+            {
+              "source": "[:else, 565, 1030, 8, 1033, 11]",
+              "package": "[:else, 28, 102, 8, 105, 11]",
+              "source_hits": 25,
+              "package_hits": 43
+            }
+          ]
+        },
+        {
+          "source": "[:if, 566, 1036, 8, 1036, 100]",
+          "package": "[:if, 29, 108, 8, 108, 100]",
+          "arms": [
+            {
+              "source": "[:then, 567, 1036, 8, 1036, 65]",
+              "package": "[:then, 30, 108, 8, 108, 65]",
+              "source_hits": 20,
+              "package_hits": 34
+            },
+            {
+              "source": "[:else, 568, 1036, 8, 1036, 100]",
+              "package": "[:else, 31, 108, 8, 108, 100]",
+              "source_hits": 5,
+              "package_hits": 9
+            }
+          ]
+        }
+      ],
+      "retained_main_executable_lines": [
+        178,
+        179,
+        180,
+        181,
+        183,
+        184,
+        185,
+        187,
+        188,
+        190,
+        191,
+        193,
+        205
+      ]
+    }
+  },
+  "case_transfer": [
+    {
+      "source_path": "test/ready_unlock_metrics_test.rb",
+      "source_sha256": "dd9e4630849be429a7a2d30a9e8e5383f9b48eba88c7097d3ca9239301ce3da2",
+      "source_case": "ReadyUnlockMetricsTest#test_immediate_unlocks_require_the_ready_task_to_be_the_final_missing_dependency",
+      "source_assertion_lines": [
+        60,
+        61,
+        62
+      ],
+      "transferred_numeric_or_selection_assertion_lines": [
+        60,
+        61,
+        62
+      ],
+      "retained_main_only_assertion_lines": [],
+      "destination_case": "CompletionMetricsTest#test_final_missing_prerequisite_excludes_started_terminal_and_icebox",
+      "purpose": "All direct unlock_count/parallel_width assertions; freshness/reservation collection remains in main."
+    },
+    {
+      "source_path": "test/ready_unlock_metrics_test.rb",
+      "source_sha256": "dd9e4630849be429a7a2d30a9e8e5383f9b48eba88c7097d3ca9239301ce3da2",
+      "source_case": "ReadyUnlockMetricsTest#test_parallel_width_uses_exact_remote_and_branch_write_authorities",
+      "source_assertion_lines": [
+        101,
+        102,
+        103,
+        104
+      ],
+      "transferred_numeric_or_selection_assertion_lines": [
+        101,
+        102,
+        103,
+        104
+      ],
+      "retained_main_only_assertion_lines": [],
+      "destination_case": "CompletionMetricsTest#test_exact_authority_aliases_branches_and_read_only_independence",
+      "purpose": "All direct unlock_count/parallel_width assertions; freshness/reservation collection remains in main."
+    },
+    {
+      "source_path": "test/ready_unlock_metrics_test.rb",
+      "source_sha256": "dd9e4630849be429a7a2d30a9e8e5383f9b48eba88c7097d3ca9239301ce3da2",
+      "source_case": "ReadyUnlockMetricsTest#test_parallel_width_respects_fresh_in_flight_and_candidate_reservations",
+      "source_assertion_lines": [
+        134,
+        135
+      ],
+      "transferred_numeric_or_selection_assertion_lines": [
+        134,
+        135
+      ],
+      "retained_main_only_assertion_lines": [],
+      "destination_case": "CompletionMetricsTest#test_candidate_own_reservation_exclusion_keeps_other_writers",
+      "purpose": "All direct unlock_count/parallel_width assertions; freshness/reservation collection remains in main."
+    },
+    {
+      "source_path": "test/ready_unlock_metrics_test.rb",
+      "source_sha256": "dd9e4630849be429a7a2d30a9e8e5383f9b48eba88c7097d3ca9239301ce3da2",
+      "source_case": "ReadyUnlockMetricsTest#test_stale_and_terminal_work_do_not_reserve_writable_capacity",
+      "source_assertion_lines": [
+        162
+      ],
+      "transferred_numeric_or_selection_assertion_lines": [
+        162
+      ],
+      "retained_main_only_assertion_lines": [],
+      "destination_case": "CompletionMetricsTest#test_exact_authority_aliases_branches_and_read_only_independence",
+      "purpose": "All direct unlock_count/parallel_width assertions; freshness/reservation collection remains in main."
+    },
+    {
+      "source_path": "test/ready_unlock_metrics_test.rb",
+      "source_sha256": "dd9e4630849be429a7a2d30a9e8e5383f9b48eba88c7097d3ca9239301ce3da2",
+      "source_case": "ReadyUnlockMetricsTest#test_exact_search_finds_maximum_compatible_subset_instead_of_greedy_result",
+      "source_assertion_lines": [
+        190
+      ],
+      "transferred_numeric_or_selection_assertion_lines": [
+        190
+      ],
+      "retained_main_only_assertion_lines": [],
+      "destination_case": "CompletionMetricsTest#test_exact_search_for_ready_and_candidate",
+      "purpose": "All direct unlock_count/parallel_width assertions; freshness/reservation collection remains in main."
+    },
+    {
+      "source_path": "test/ready_unlock_metrics_test.rb",
+      "source_sha256": "dd9e4630849be429a7a2d30a9e8e5383f9b48eba88c7097d3ca9239301ce3da2",
+      "source_case": "ReadyUnlockMetricsTest#test_candidate_completion_unlocks_tasks_without_reserving_its_own_authority",
+      "source_assertion_lines": [
+        216,
+        217,
+        221
+      ],
+      "transferred_numeric_or_selection_assertion_lines": [
+        216,
+        217,
+        221
+      ],
+      "retained_main_only_assertion_lines": [],
+      "destination_case": "CompletionMetricsTest#test_candidate_own_reservation_exclusion_keeps_other_writers",
+      "purpose": "All direct unlock_count/parallel_width assertions; freshness/reservation collection remains in main."
+    },
+    {
+      "source_path": "test/ready_unlock_metrics_test.rb",
+      "source_sha256": "dd9e4630849be429a7a2d30a9e8e5383f9b48eba88c7097d3ca9239301ce3da2",
+      "source_case": "ReadyUnlockMetricsTest#test_candidate_completion_keeps_other_fresh_writer_reservations",
+      "source_assertion_lines": [
+        257
+      ],
+      "transferred_numeric_or_selection_assertion_lines": [
+        257
+      ],
+      "retained_main_only_assertion_lines": [],
+      "destination_case": "CompletionMetricsTest#test_candidate_own_reservation_exclusion_keeps_other_writers",
+      "purpose": "All direct unlock_count/parallel_width assertions; freshness/reservation collection remains in main."
+    },
+    {
+      "source_path": "test/ready_unlock_metrics_test.rb",
+      "source_sha256": "dd9e4630849be429a7a2d30a9e8e5383f9b48eba88c7097d3ca9239301ce3da2",
+      "source_case": "ReadyUnlockMetricsTest#test_candidate_completion_uses_exact_maximum_compatible_subset",
+      "source_assertion_lines": [
+        287
+      ],
+      "transferred_numeric_or_selection_assertion_lines": [
+        287
+      ],
+      "retained_main_only_assertion_lines": [],
+      "destination_case": "CompletionMetricsTest#test_exact_search_for_ready_and_candidate",
+      "purpose": "All direct unlock_count/parallel_width assertions; freshness/reservation collection remains in main."
+    },
+    {
+      "source_path": "test/cli_test.rb",
+      "source_sha256": "bf39c27c6a97cb161c386b48c3c0586b30be0b398ecee07de593acab1fe88685",
+      "source_case": "CLITest#test_status_ranks_ready_tasks_by_downstream_depth_then_distinct_count_then_natural_id",
+      "source_assertion_lines": [
+        802,
+        805,
+        806,
+        808,
+        810,
+        812,
+        813,
+        814
+      ],
+      "transferred_numeric_or_selection_assertion_lines": [
+        806,
+        808,
+        810
+      ],
+      "retained_main_only_assertion_lines": [
+        802,
+        805,
+        812,
+        813,
+        814
+      ],
+      "destination_case": "CompletionMetricsTest#test_graph_shapes_and_missing_dependency_field",
+      "purpose": "Numeric depth/distinct descendants for chain (4/4), diamond (2/3), cycle (1/1); ranking/rendering assertions stay in main."
+    },
+    {
+      "source_path": "test/cli_test.rb",
+      "source_sha256": "bf39c27c6a97cb161c386b48c3c0586b30be0b398ecee07de593acab1fe88685",
+      "source_case": "CLITest#test_status_displays_completion_metrics_for_fresh_candidates_without_reordering_them",
+      "source_assertion_lines": [
+        838,
+        841,
+        842,
+        845,
+        848,
+        849
+      ],
+      "transferred_numeric_or_selection_assertion_lines": [
+        842,
+        845,
+        849
+      ],
+      "retained_main_only_assertion_lines": [
+        838,
+        841,
+        848
+      ],
+      "destination_case": "CompletionMetricsTest#test_empty_results_and_dashboard_status_selection",
+      "purpose": "Metric selection/defaults for READY and fresh CANDIDATE; ordering/rendering and freshness projection stay in main."
+    },
+    {
+      "source_path": "test/cli_test.rb",
+      "source_sha256": "bf39c27c6a97cb161c386b48c3c0586b30be0b398ecee07de593acab1fe88685",
+      "source_case": "CLITest#test_status_ranks_ready_tasks_by_parallel_width_then_unlock_count_before_downstream_metrics",
+      "source_assertion_lines": [
+        874,
+        877,
+        878,
+        881,
+        884
+      ],
+      "transferred_numeric_or_selection_assertion_lines": [
+        878,
+        881,
+        884
+      ],
+      "retained_main_only_assertion_lines": [
+        874,
+        877
+      ],
+      "destination_case": "CompletionMetricsTest#test_empty_results_and_dashboard_status_selection",
+      "purpose": "Supplied unlock metrics pass-through only; all rank/tie/rendering assertions stay in main."
+    },
+    {
+      "source_path": "test/icebox_test.rb",
+      "source_sha256": "d100496273ea14f00632a557184e762f58dc3746aeeb68eb2381b9942b993ac1",
+      "source_case": "IceboxTest#test_dependency_changes_and_unlock_metrics_remain_truthful",
+      "source_assertion_lines": [
+        166,
+        167,
+        168,
+        170,
+        172,
+        173,
+        175,
+        176
+      ],
+      "transferred_numeric_or_selection_assertion_lines": [
+        172,
+        173
+      ],
+      "retained_main_only_assertion_lines": [
+        166,
+        167,
+        168,
+        170,
+        175,
+        176
+      ],
+      "destination_case": "CompletionMetricsTest#test_final_missing_prerequisite_excludes_started_terminal_and_icebox",
+      "purpose": "Icebox grants no immediate unlock; lifecycle deferral/restore assertions stay in main."
+    },
+    {
+      "source_path": "test/external_activity_test.rb",
+      "source_sha256": "4899f786fc2025a75b69a3a014736addd6bfb2fe6e61dc5d1ae3cbbd7bdc16fd",
+      "source_case": "ExternalActivityTest#test_read_only_inspection_and_no_observation_json_compatibility",
+      "source_assertion_lines": [
+        159,
+        161,
+        162,
+        172,
+        174,
+        175,
+        176,
+        180,
+        184
+      ],
+      "transferred_numeric_or_selection_assertion_lines": [],
+      "retained_main_only_assertion_lines": [
+        159,
+        161,
+        162,
+        172,
+        174,
+        175,
+        176,
+        180,
+        184
+      ],
+      "destination_case": "CompletionMetricsTest#test_external_conflicts_precede_authority_reads",
+      "purpose": "Integration inventory retained in main: these cases have no direct unlock metric assertion. Package adds direct external-blocked width/count and read-only fact coverage; alias normalization, scope and admission stay in main."
+    },
+    {
+      "source_path": "test/external_activity_test.rb",
+      "source_sha256": "4899f786fc2025a75b69a3a014736addd6bfb2fe6e61dc5d1ae3cbbd7bdc16fd",
+      "source_case": "ExternalActivityTest#test_bounded_unknown_alias_and_read_only_scheduling",
+      "source_assertion_lines": [
+        216,
+        217,
+        218,
+        219,
+        221,
+        222,
+        228,
+        229
+      ],
+      "transferred_numeric_or_selection_assertion_lines": [],
+      "retained_main_only_assertion_lines": [
+        216,
+        217,
+        218,
+        219,
+        221,
+        222,
+        228,
+        229
+      ],
+      "destination_case": "CompletionMetricsTest#test_external_conflicts_precede_authority_reads",
+      "purpose": "Integration inventory retained in main: these cases have no direct unlock metric assertion. Package adds direct external-blocked width/count and read-only fact coverage; alias normalization, scope and admission stay in main."
+    }
+  ],
+  "new_decisions": [
+    "Missing consumed facts refuse; excluded facts are not read",
+    "Malformed canonical authority/boolean facts refuse",
+    "External conflicts directly reduce width only",
+    "Repeated calls preserve deeply frozen inputs",
+    "Calculation entrypoints invoke no I/O/process/load operations"
+  ],
+  "adoption": "No main tests removed here. AB-TK-02B retains observation/error/probe order, public status/next journeys and negative handoff controls; adopt only operator-published revision plus full production digests."
+}
